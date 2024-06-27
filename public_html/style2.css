@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #2a2a2a;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    background-color: #5630bf;
+    color: #fff;
+    position: relative;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.hero .image {
+    flex: 1;
+}
+
+.hero .image img {
+    width: 100%;
+    height: auto;
+}
+
+.hero .text-container {
+    flex: 2;
+    padding: 20px;
+    background-color: #5630bf;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e6007e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero .terms {
+    font-size: 0.8em;
+}
+
+.hero .terms a {
+    color: #e6007e;
+    text-decoration: underline;
+}

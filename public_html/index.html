@@ -3,56 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Original Gym Design</title>
+    <title>FITNESS 4:13</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/xyz123.css">    
+    <link rel="stylesheet" href="https://use.typekit.net/xyz123.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="nav-menu">
         <div class="logo">
             <img src="media/Logo.JPG" alt="Gym Logo">
+            <span class="logo-text">FITNESS&nbsp;</span><span class="logo-413">4:13</span>
+        </div>
+        <div class="open">
+            <span class="logo-text">OPEN&nbsp;</span><span class="logo-413">24 HRS</span>
         </div>
         <div class="nav-links">
             <a href="#about">ABOUT</a>
             <a href="#training">TRAINING</a>
             <a href="#contact">CONTACT</a>
-            <a href="#blog">BLOG</a>
+            <a href="#blog">VIDEOS</a>
             <a href="#join" class="book-now">JOIN NOW</a>
         </div>
     </div>
-    <div class="gym-header">
-        <p>PERSONAL TRAINING</p>
-        <h1>TRANSFORM YOUR BODY</h1>
-        <p>IMDABES</p>
-        <div class="cta-container">
-            <a href="#contact" class="cta-button">Contact Us</a>
-        </div>
-    </div>
-    </div>
+
     <div class="social-links">
-        <a href="https://www.facebook.com/Fitness413Gym/"><i class="fab fa-facebook-f"></i></a>        
+        <a href="https://www.facebook.com/Fitness413Gym/"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/fitness413gym?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/fitness413gym"><i class="fab fa-youtube"></i></a>
         <a href="https://www.tiktok.com/@deathbybarbells"><i class="fab fa-tiktok"></i></a>
     </div>
-    <div class="content">
-        <div class="about"><h2 style="color: #0290f5;";>ABOUT</h2><br>
-        <p>Umhihello, I'm Kevin, owner of Fitness 4:13. We are a Christian-based gym. Add more</p><br>
-        Philippians 4:13: "I can do all things through Christ who strengthens me."
-        </div><br><br>
-        <div class="training"><h2 style="color: #0290f5;";>PERSONAL TRAINING</h2><br>
-            <p>Ready to change your lifestyle? Are you ready to transform your body into the best it can be? Schedule an appointment to begin your training! Add more</p>
+
+    <section class="promo">
+        <div class="promo-content-container">
+            <div class="promo-image">
+                <img src="media/background.jfif" alt="Workout Image">
+                <div class="form-overlay">
+                    <div class form-container>
+                        <div><h1>PERSONAL TRAINING<br>TRANSFORM YOUR BODY</h1></div>
+                        <div>IMDABES</div>
+                        <div><a href="#contact" class="promo-button">CONTACT US</a></div>
+                        <div><p class="restrictions">Terms, conditions, & restrictions apply. <a href="terms">See details</a></p></div>
+                    </div>
+                </div>
             </div>
+            <div class="promo-image">
+                <img src="media/workout.jpg" alt="Workout Image">
+            </div>
+        </div>
+    </section>
+    
+    <div class="content">
+        <div class="section about">
+            <div class="accent-line"></div>
+            <h2>ABOUT</h2><br>
+            <div class="form-container">
+                <p>At <strong>Fitness 4:13</strong>, we are more than just a gym. We are a welcoming community where your physical fitness and faith can come together. Established in 2019, Fitness 4:13 is driven by a passion to share the transformative power of faith and fitness with our community. As the owner, I have created a space that supports and inspires individuals like you to achieve your wellness goals.</p>
+                <p>Our mission is to motivate, support, and hold you accountable on your fitness and wellness journey.</p>
+                <p>Join us at Fitness 4:13 and embark on a transformative journey. Let us guide you towards a healthier, more purposeful life through fitness and faith.</p><br>
+                <p>Philippians 4:13: "I can do all things through Christ who strengthens me."</p>
+            </div>
+        </div>
+
+        <div class="section join">
+            <div class="accent-line"></div>
+            <h2>JOIN OUR FAMILY</h2><br>
+            <div class="form-container">
+                <p>Memberships are no-contract and include one free personal training session to get you started. </p>
+                <p>Fill out and submit the forms below to begin your transformation!</p><br>
+                <h5>MEMBERSHIP</h5>
+                <a href="media/MembershipForm.pdf" target="_blank">Download Membership Form</a><br><br>
+                <h5>RELEASE OF LIABILITY</h5>
+                <a href="media/ReleaseOfLiability.pdf" target="_blank">Download Release of Liability Form</a><br><br>
+                <h5>WAIVER & RELEASE</h5>
+                <a href="media/Waiver&Release.pdf" target="_blank">Download Waiver & Release Form</a><br><br>
+                <h5>UPLOAD COMPLETED FORMS</h5><br>
+                <form id="upload-form" action="submit.php" method="post" enctype="multipart/form-data">
+                    <div class="file-input-wrapper">
+                        <label for="pdfForms" class="file-label button">CHOOSE FILES</label><br><br>
+                        <input type="file" id="pdfForms" name="pdfForms[]" multiple accept=".pdf" required style="display: none;">
+                    </div>
+                    <div id="file-list"></div>
+                    <a href="#" class="button submit-button disabled" id="submit-link" style="pointer-events: none;">SUBMIT</a>
+                </form>
+            </div>
+            <div><br><br><p>asld;kfj</p></div>
+        </div>
+
+        <div class="section trial">
+            <div class="accent-line"></div>
+            <h2>FREE 7-DAY PASS</h2><br>
+            <div class="form-container">
+                <p>Fill the information below to get started!</p><br>
+                <form id="free-pass-form" action="submit_free_pass.php" method="post">
+                    <input type="text" id="first-name" name="first-name" placeholder="FIRST NAME*" required>
+                    <input type="text" id="last-name" name="last-name" placeholder="LAST NAME*" required>
+                    <input type="email" id="email" name="email" placeholder="EMAIL*" required>
+                    <input type="tel" id="phone" name="phone" placeholder="PHONE*" required>
+                    <input type="text" id="zip-code" name="zip-code" placeholder="ZIP CODE*" required>
+                    <div><input type="submit" class="button submit-button" value="Submit"></div><br>
+                    <p class="form-notice">Must be 18 years of age or older. Valid ID required. Terms and conditions may vary.
+                    Each Fitness 4:13 gym is independently owned and operated. By submitting my information, I accept the
+                    <a href="#">Terms & Conditions</a> and <a href="#">Privacy Notice</a>, and consent to receive marketing
+                    and other communications by email, phone, and text from Fitness 4:13 and its affiliates.</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="section train">
+            <div class="accent-line"></div>
+            <h2>PERSONAL TRAINING</h2><br>
+            <p>Are you ready to transform your body into the best it can be? Schedule an appointment to begin your training!</p>
+        </div>
     </div>
+
+    <script src="javascript/file_upload.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
     <div class="footer" id="footer">
         <h5 class="contact-info">
             119 N CENTRAL AVE, TROY, TX 76579 <br>
             EMAIL: FITNESS413@GMAIL.COM<br>
             PHONE: (512) 705-6439
         </h5>
-        <br>
         <p>&copy; 2024 Fitness 4:13. All rights reserved.</p>
     </div>
+
 </body>
 </html>

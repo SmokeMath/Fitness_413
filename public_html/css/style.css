@@ -1,15 +1,17 @@
 :root {
-    --primary-color: #242A33; /* Dark Background Color */
-    --secondary-color: #3498db; /* Blue Color */
-    --accent-color: #1ABC9C; /* Green Accent Color */
-    --text-color: #ffffff; /* White Text */
-    --nav-background: #242A33; /* Dark Background for Navbar */
-    --footer-background: #0290f5; /* Light Blue Background for Footer */
-    --button-background: #0290f5; /* Blue Button */
+    --primary-color: #242A33;
+    --secondary-color: #3498db;
+    --button-background: #0290f5;
+    --text-color: #ffffff;
+    --background-color: #242A33;
+    --footer-background: #0290f5;
+    --accent-color: #5dade2;
+    --font-heading: 'YourHeadingFont', sans-serif;
+    --font-body: 'YourBodyFont', sans-serif;
 }
 
 * {
-    font-family: 'proxima-nova', sans-serif;
+    font-family: 'proxima-nova', Arial, sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -22,6 +24,9 @@ html, body {
 }
 
 body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
 }
@@ -32,13 +37,33 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     padding: 10px 20px;
     z-index: 1000;
+    background-color: #101010;
+    height: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    height: 85px;
+    height: 50px;
+}
+
+.logo-text, .logo-413 {
+    font-size: 1.5em;
+}
+
+.logo-text {
+    margin-left: 10px;
+    color: #3498db;
+}
+
+.logo-413 {
+    color: white;
 }
 
 .nav-links {
@@ -55,7 +80,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--accent-color);
+    color: var(--button-background);
 }
 
 .book-now {
@@ -70,81 +95,71 @@ body {
 }
 
 .book-now:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
+    background-color: var(--button-background);
+    border-color: var(--button-background);
 }
 
-.gym-header {
-    background: url('../media/workout.jpg') no-repeat center center/cover;    
-    padding: 150px 20px;
-    position: relative;
+.promo {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    margin-top: 0px;
+    background: none;
 }
 
-.gym-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.promo-content-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px;
+    
+}
+
+.promo-content {
+    max-width: 600px;
+    color: var(--text-color);
+}
+
+.promo-image {
+    position: relative;
+    flex: 1;
+    height: 60vh;
+}
+
+.promo-image img {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    object-fit: cover;
 }
 
-.gym-header h1, .gym-header h2, .gym-header p {
-    text-align: left;
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    color: white;
-    position: relative;
-    z-index: 2;
+.promo-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
-.gym-header h1 {
-    margin: 0;
-    font-size: 4em;
-    font-weight: bold;
-    color:#3498db
+.promo-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
-.gym-header h2 {
-    margin-top: 10px;
-    font-size: 2.5em;
-    font-weight: lighter;
-}
-
-.gym-header p {
-    font-size: 1.5em;
-    margin: 10px 0 20px 0;
-}
-
-.gym-header .cta-container {
-    max-width: 600px;
-    width: 100%;
-    margin: 20px auto 0;
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    z-index: 2;
-}
-
-.gym-header .cta-button {
-    background-color: var(--button-background);
+.promo-button {
+    display: inline-block;
+    background-color: var(--primary-color);
     color: var(--text-color);
     padding: 15px 30px;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.2em;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    display: inline-block;
 }
-.gym-header .cta-button:hover {
-    background-color: var(--accent-color);
+
+.promo-button:hover {
+    background-color: #0270b5;
 }
 
 .social-links {
@@ -177,34 +192,212 @@ body {
     opacity: 0.7;
 }
 
-/* Facebook */
-.social-links .fa-facebook {    
-    color: white;
-}
-
-/* Instagram */
-.social-links .fa-instagram {
-    color: white;
-}
-
-/* YouTube */
-.social-links .fa-youtube {
-    color: white;
-}
-
-/* TikTok */
-.social-links .fa-tiktok {
-    color: white;
-}
-
 .content {
     flex: 1;
     padding: 20px;
 }
 
+.section {
+    background-color: #0290f5;
+    padding: 20px 30px;
+    max-width: 600px;
+    margin: 40px auto;    
+    border-radius: 8px;
+    position: relative;
+}
+
+.section .accent-line {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.section h2 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+.section a {
+    color: white;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+.about {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.trial {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.join {    
+    padding: 20px 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+    position: relative;
+    color: white;
+}
+
+.join .accent-line {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.join h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.join p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.form-overlay {
+    position: absolute;
+    top: 20%; /* Center vertically */
+    left: 21%; /* Center horizontally */
+    height: 70%;
+    width: 80%; /* Adjust as needed */
+    background-color: var(--button-background);
+    padding: 20px;
+    border-radius: 8px;    
+}
+
+.form-container {    
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;    
+    position: relative;
+}
+
+.form-container p, .form-container h5, .form-container a, .form-container form {
+    color: #333;
+}
+
+.form-container a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.file-input-wrapper label, .submit-button, .book-now, .file-label, .button {
+    background-color: var(--button-background);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid var(--secondary-color);
+    text-align: center;
+    width: auto;
+}
+
+.file-input-wrapper label:hover, .submit-button:hover, .book-now:hover, .file-label:hover, .button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #999;
+    border-radius: 25px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+    border-color: #3498db;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+input[type="submit"] {
+    background-color: var(--button-background);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+    text-align: center;
+    width: auto;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.form-notice {
+    color: #333;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.form-notice a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.form-notice a:hover {
+    text-decoration: underline;
+}
+
 .footer {
     background-color: var(--footer-background);
-    color: var(--text-color);
+    color: var (--text-color);
     text-align: center;
     padding: 20px;
     width: 100%;
