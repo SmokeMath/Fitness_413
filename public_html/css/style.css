@@ -3,7 +3,7 @@
     --secondary-color: #3498db;
     --button-background: #0290f5;
     --text-color: #ffffff;
-    --background-color: #242A33;
+    --background-color: #101010;
     --footer-background: #0290f5;
     --accent-color: #5dade2;
     --font-heading: 'YourHeadingFont', sans-serif;
@@ -29,6 +29,7 @@ body {
     color: var(--text-color);
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .nav-menu {
@@ -64,6 +65,31 @@ body {
 
 .logo-413 {
     color: white;
+}
+
+scroll-container {
+    position: relative;
+    width: 100%; /* Set your desired width */
+    height: 50px;  /* Set your desired height */
+    overflow: hidden;
+    border: 1px solid #000;
+}
+
+.scroll-text {
+    display: inline-block;
+    position: absolute;    
+    white-space: nowrap;
+    will-change: transform;
+    animation: scroll 7s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .nav-links {
@@ -194,7 +220,7 @@ body {
 
 .content {
     flex: 1;
-    padding: 20px;
+    padding: 20px;    
 }
 
 .section {
@@ -204,17 +230,6 @@ body {
     margin: 40px auto;    
     border-radius: 8px;
     position: relative;
-}
-
-.section .accent-line {
-    width: 100%;
-    height: 5px;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
 }
 
 .section h2 {
@@ -236,8 +251,8 @@ body {
 }
 
 .about {
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 140px;
+    margin-top: 0px;
 }
 
 .trial {
@@ -254,17 +269,6 @@ body {
     color: white;
 }
 
-.join .accent-line {
-    width: 100%;
-    height: 5px;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
 .join h2 {
     color: #333;
     margin-top: 20px;
@@ -277,10 +281,10 @@ body {
 
 .form-overlay {
     position: absolute;
-    top: 20%; /* Center vertically */
-    left: 21%; /* Center horizontally */
+    top: 20%;
+    left: 21%;
     height: 70%;
-    width: 80%; /* Adjust as needed */
+    width: 80%;
     background-color: var(--button-background);
     padding: 20px;
     border-radius: 8px;    
@@ -290,18 +294,18 @@ body {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #0290f5;
     border-radius: 8px;    
     position: relative;
 }
 
 .form-container p, .form-container h5, .form-container a, .form-container form {
-    color: #333;
+    color: white;
 }
 
 .form-container a {
     text-decoration: none;
-    color: #3498db;
+    color: blue;
 }
 
 .form-container a:hover {
@@ -387,8 +391,8 @@ input[type="submit"]:hover {
 }
 
 .form-notice a {
-    color: #3498db;
-    text-decoration: none;
+    color: blue;
+    
 }
 
 .form-notice a:hover {
